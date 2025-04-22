@@ -1,6 +1,6 @@
 import mongoose from 'mongoose'
 
-const userSchema=new mongooseSchema({
+const userSchema=new mongoose.Schema({
     firstName:{
         type:String,
         required:true,
@@ -19,7 +19,7 @@ const userSchema=new mongooseSchema({
         required:true,
         unique:true,
         lowercase:true,
-         match:/^[a-zA-Z0-0]+$/
+        // match:/^[a-zA-Z0-0]+$/
     },
     password:{
         type:String,
@@ -35,7 +35,7 @@ const userSchema=new mongooseSchema({
         type:String
     },
     entries: {
-        type: [ Schema.Types.ObjectId ],
+        type: [ mongoose.Schema.Types.ObjectId ],
         ref: 'entries',
         default: [],
     }

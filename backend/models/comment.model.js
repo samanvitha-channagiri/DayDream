@@ -2,12 +2,12 @@ import mongoose from "mongoose"
 
 const commentSchema=mongoose.Schema({
     entry_id:{
-        type:Schema.Types.ObjectId,
+        type:mongoose.Schema.Types.ObjectId,
     required:true,
     ref:'entries'
 },
 entry_author:{
-    type:Schema.Types.ObjectId,
+    type:mongoose.Schema.Types.ObjectId,
     required:true,
     ref:'entries'
 },
@@ -16,7 +16,7 @@ comment: {
     required: true
 },
 commented_by: {
-    type: Schema.Types.ObjectId,
+    type: mongoose.Schema.Types.ObjectId,
     require: true,
     ref: 'users'
 },
